@@ -1,8 +1,6 @@
 # Connect-Four
 Connect 4 game for two players (CSE 20312)
-/Marya Poterek
-//report.txt for C4 classes
-//CSE 20312
+
 
 From the user's perspective, this program is very simple. Each user (player 1 or 2) is prompted in turn to add a piece (X or O) to the board in a column of his or her choice. The board is then printed out with the user's piece placed in it and the next user can decide which column to place his or her piece in. The two players continue to alternate until one of them achieves four pieces in a row and is declared a winner, or all 42 spaces on the board have been filled. At each opportunity for user input, there are error checks present to keep the game flowing smoothly if a column name outside of the board's range is entered, the user is asked to enter a valid column name and will continue to be asked until he/she does so. Additionally, if the player tries to place a piece in an already-full row, he/she will be told that the row is full, and the next player will take his/her turn. 
 Internally, the program uses composition and is structured upon two classes: C4Board and C4Col. An object of the latter is instantiated and constructed in the latter's implementation and interface, essentially building a game board by establishing an array of class C4Col objects, which in turn are one-dimensional arrays that form each column of the board. An object of class C4Board is instantiated in main, which constructs the C4Col objects in turn when its own constructor is run. 
